@@ -11,6 +11,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
         
         <title>Bootstrap 101 Template</title>
         
@@ -26,6 +27,7 @@
     </head>
     <body>
         <div class="wrapper fadeInDown">
+            <div id="vk_auth"></div>
             <div id="formContent">
                 <!-- Tabs Titles -->
                 
@@ -37,14 +39,15 @@
                 <!-- Login Form -->
                 <form id = form-in>
                     <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-                    <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+                    <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
                     <input type="submit" class="fadeIn fourth" value="Log In">
+                    <div class = "uLogin" id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name;providers=facebook,vkontakte;hidden=;redirect_uri=https%3A%2F%2Fnastya07s.github.io%2FTask3%2F;mobilebuttons=0;"></div>
                 </form>
                 <form id = form-up>
                     <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
                     <input type="text" id="e-mail" class="fadeIn second" name="e-mail" placeholder="e-mail">
-                    <input type="text" id="enter password" class="fadeIn third" name="enter password" placeholder="enter password">
-                    <input type="text" id="repeat password" class="fadeIn third" name="repeat password" placeholder="repeat password">
+                    <input type="password" id="enter password" class="fadeIn third" name="enter password" placeholder="enter password">
+                    <input type="password" id="repeat password" class="fadeIn third" name="repeat password" placeholder="repeat password">
                     <input type="submit" class="fadeIn fourth" value="Log In">
                 </form>
                 
@@ -55,11 +58,36 @@
                 
             </div>
         </div>
+        <div class="result"></div>
         
+        <!--<script> 
+            
+            $(document).ready(function() {
+            
+            $(".result").load("/php.php");
+            
+            });
+            
+        </script> -->
+        <script type="text/javascript">
+            VK.init({apiId: 6976894});
+        </script>
+        
+        <!-- VK Widget -->
+        
+        <!-- VK Widget -->
+        <div id="vk_auth"></div>
+        <script type="text/javascript">
+            VK.Widgets.Auth("vk_auth", {"authUrl":"/dev/Login"});
+        </script>
+        
+        <!--<div class = "uLogin" id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name;providers=facebook,vkontakte;hidden=;redirect_uri=https%3A%2F%2Fnastya07s.github.io%2FTask3%2F;mobilebuttons=0;"></div>-->
+        <script src="ulog.js"></script>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script
-            Include all compiled plugins (below), or include individual files as needed-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--Include all compiled plugins (below), or include individual files as needed-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="script.js"></script>
+        
     </body>
 </html>
