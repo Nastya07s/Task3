@@ -48,21 +48,12 @@
                     </div>
                     <div class="social twitter">
                         <a href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-                    </div><div class="social vk" id="vk_auth">
-                        <a href="#" target="_blank"><i class="fa fa-vk fa-2x"></i></a>    
+                    </div><div class="social vk" >
+                        <a width = "100%" id="vk_auth" href="#" target="_blank"><i class="fa fa-vk fa-2x"></i></a>    
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <script type="text/javascript">
-            VK.init({apiId: 6976894});
-        </script>
-        
-        <!-- VK Widget -->
-        <script type="text/javascript">
-            VK.Widgets.Auth("vk_auth", {"authUrl":"/dev/Login"});
-        </script>
+        </div>      
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -70,5 +61,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="script.js"></script>
         
+        <!-- VK Widget -->
+        <script type="text/javascript">
+        VK.init({apiId: 6976894});
+        jQuery(document).ready(function(e) {
+            var size_man = jQuery('#vk_auth').width();
+            VK.Widgets.Auth("vk_auth",{"width":size_man}, {"authUrl":"/dev/Login"});
+        </script>
     </body>
 </html>
