@@ -1,4 +1,4 @@
-
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 /* BASIC */
 
 html {
@@ -16,6 +16,7 @@ a {
   display:inline-block;
   text-decoration: none;
   font-weight: 400;
+  margin:  0 10px 10px 0;
 }
 
 h2 {
@@ -63,19 +64,39 @@ h2 {
   text-align: center;
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
-#form-up{
+.or{
+  color: #000000;
+  margin-bottom:  12px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+
+#form-up {
   display:none;
 }
 
-#vk_auth{
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  z-index: 200;
-  opacity: 1;
+.social a {
+    text-align: center;
+    width: 50px;
+    height: 45x;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
 }
+
+.twitter a:hover {background: #00acee; color: #fff;}
+.facebook a:hover {background: #3b5998; color: #fff;}
+.vk a:hover {background: #5d84ae; color: #fff;}
 
 /* TABS */
 
