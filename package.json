@@ -1,0 +1,21 @@
+{
+    "name": "passportjs_example",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "bootstrap": "^4.3.1",
+        "connect-flash": "*",
+        "connect-memcached": "*",
+        "express": "3.4.8",
+        "jade": "*",
+        "jquery": "^3.4.1",
+        "nconf": "*",
+        "passport": "*",
+        "passport-facebook": "*",
+        "passport-local": "*",
+        "passport-vkontakte": "*"
+    }
+}
