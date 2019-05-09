@@ -1,72 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=2">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        
-        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
-        
-        <title>Bootstrap 101 Template</title>
-    </head>
-    <body>
-        <div class="wrapper fadeInDown">
-            <div id="formContent">
-                <!-- Icon -->
-                <div class="fadeIn first">
-                    <!--<img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />-->
-                </div>
-                
-                <!-- Login Form -->
-                <form id = form-in>
-                    <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-                    <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
-                    <input type="submit" class="fadeIn fourth" value="Log In">
-                    <div class = "uLogin" id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name;providers=facebook,vkontakte;hidden=;redirect_uri=https%3A%2F%2Fnastya07s.github.io%2FTask3%2F;mobilebuttons=0;"></div>
-                </form>
-                <form id = form-up>
-                    <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
-                    <input type="text" id="e-mail" class="fadeIn second" name="e-mail" placeholder="e-mail">
-                    <input type="password" id="enter password" class="fadeIn third" name="enter password" placeholder="enter password">
-                    <input type="password" id="repeat password" class="fadeIn third" name="repeat password" placeholder="repeat password">
-                    <input type="submit" class="fadeIn fourth" value="Log In">
-                </form>
-                
-                <!-- Sign Up -->
-                <div id="formFooter">
-                    <a class="underlineHover" id = "link-txt" href="#">Sign up</a>
-                    <div class = "or">or</div>
-                    
-                    <div class="social facebook">
-                        <a href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>    
-                    </div>
-                    <div class="social twitter">
-                        <a href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-                    </div><div class="social vk" >
-                        <a width = "100%" id="vk_auth" onclick="WAuth.auth(this)" target="_blank"><i class="fa fa-vk fa-2x"></i></a>    
-                    </div>
-                </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=2">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <title>Task3</title>
+</head>
+<body>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Icon -->
+        <div class="fadeIn first">
+        </div>
+
+        <!-- Login Form -->
+        <form id=form-in>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+            <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+        <form id=form-up>
+            <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
+            <input type="text" id="e-mail" class="fadeIn second" name="e-mail" placeholder="e-mail">
+            <input type="password" id="enter password" class="fadeIn third" name="enter password"
+                   placeholder="enter password">
+            <input type="password" id="repeat password" class="fadeIn third" name="repeat password"
+                   placeholder="repeat password">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+
+        <!-- Sign Up -->
+        <div id="formFooter">
+            <a class="underlineHover" id="link-txt" href="#">Sign up</a>
+            <div class="or">or</div>
+
+            <div class="social facebook">
+                <a href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
             </div>
-        </div>      
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!--Include all compiled plugins (below), or include individual files as needed-->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="script.js"></script>
-        
-        <!-- VK Widget -->
-        <script type="text/javascript">
-        VK.init({apiId: 6976894});
-        <!--jQuery(document).ready(function(e) {
-            <!--var size_man = jQuery('#vk_auth').width();-->
-            VK.Widgets.Auth("vk_auth", {"authUrl":"/dev/Login"});
-        </script>
-    </body>
+            <div class="social twitter">
+                <a href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+            </div>
+            <div class="social vk">
+                <a href="https://oauth.vk.com/authorize?client_id=6977635&display=page&redirect_uri=usersTable.html&scope=email&response_type=token&v=5.95&" id="vk" width="100%" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
+            </div>
+            <button >Показать друзей</button>
+        </div>
+    </div>
+</div>
+<ul></ul>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    $('#vk').on('click', sendRequest);
+
+    function getUrl(method, params) {
+        if (!method) throw new Error('Вы не указали метод!');
+        params = params || {};
+        params['access_token'] = '775fdeca4507820d7493bf2da0eb899c9f6ed967f5bc7eadc3d1284550c00ccf5f30e5cb17f20085620ce';
+        return 'https://api.vk.com/method/' + method + '?' + $.param(params) + '&v=5.52';
+    }
+
+    function sendRequest() {
+        $.ajax({
+            url: 'https://oauth.vk.com/access_token',
+            method: 'GET',
+            dataType: 'JSONP',
+            success: function(data) {
+                // расшифровка данных
+                var result = $.parseJSON(data);
+                // и запись «токена» в переменную
+                var access_token = result.access_token;
+                console.log(access_token);
+            }
+        })
+    }
+
+    function loadFriends() {
+        sendRequest('friends.search', {count: 60, fields: 'photo_100,online'}, function (data) {
+            console.log(data);
+        });
+
+    }
+
+</script>
+</body>
 </html>
